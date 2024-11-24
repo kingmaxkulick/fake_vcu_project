@@ -1,0 +1,6 @@
+2024-11-21 16:58:09,540 - __main__ - INFO - Starting VCU Simulator
+2024-11-21 16:58:09,569 - can.interfaces.socketcan.socketcan - INFO - Created a socket
+2024-11-21 16:58:09,571 - src.handlers.message_sender - ERROR - Error sending state message: Failed to transmit: No buffer space available [Error Code 105]
+2024-11-21 16:58:09,571 - src.handlers.message_sender - INFO - State changed: PARK -> PARK
+2024-11-21 16:58:09,572 - __main__ - INFO - VCU Simulator initialized
+2024-11-21 16:58:09,575 - src.handlers.message_sender - ERROR - Error sending charge percentage: Failed to transmit: No buffer space available [Error Code 105]

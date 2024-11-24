@@ -1,0 +1,5 @@
+2024-11-21 00:30:40,979 - __main__ - INFO - Starting VCU Simulator
+2024-11-21 00:30:41,008 - can.interfaces.socketcan.socketcan - INFO - Created a socket
+2024-11-21 00:30:41,009 - __main__ - ERROR - Unexpected error: 'GPIOHandler' object has no attribute 'setup_gpio'
+2024-11-21 00:30:41,009 - can.bus - WARNING - SocketcanBus was not properly shut down
+2024-11-21 00:30:41,010 - root - INFO - VCU Simulator shutdown complete

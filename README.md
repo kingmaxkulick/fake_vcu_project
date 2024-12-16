@@ -119,14 +119,3 @@ fake_vcu_project/
 - Tire Pressure: 28-36 PSI
 - Power Output: -100 to 100 kW
 
-## Contributing
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-[Insert License Information]
-
-## Contact
-[Your Contact Information]

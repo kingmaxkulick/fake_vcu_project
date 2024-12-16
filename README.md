@@ -6,11 +6,10 @@ This VCU simulator generates realistic vehicle data and state information, desig
 
 ## Features
 - Real-time vehicle state simulation
-- Dynamic vehicle metrics generation
+- Changing vehicle metrics generation
 - Fault injection and monitoring
 - Interactive keyboard controls
-- Configurable update rates
-- Realistic data value simulation
+
   
 ## System Architecture
 ```mermaid
@@ -166,20 +165,6 @@ fake_vcu_project/
 - Defines fault types
 - Specifies nominal value ranges
 
-## Prerequisites
-- Python 3.11+
-- Raspberry Pi with CAN interface
-- Required Python packages:
-  - python-can
-  - asyncio
-
-## Hardware Setup
-1. Configure CAN interface:
-```bash
-# Load CAN modules
-sudo modprobe can
-sudo modprobe can_raw
-
 # Setup CAN interface (can0)
 sudo ip link set can0 type can bitrate 500000
 sudo ip link set up can0
@@ -232,19 +217,6 @@ candump -t a can0
 ```
 
 ## Value Ranges and Behaviors
-
-### Temperature Ranges
-- Battery: 15-45°C (Warning: 40°C, Critical: 45°C)
-- Motor: 20-85°C (Warning: 70°C, Critical: 85°C)
-- Tires: 20-80°C (Warning: 70°C, Critical: 80°C)
-
-### Pressure Ranges
-- Tires: 28-36 PSI (Warning: <30 or >35 PSI, Critical: <28 or >36 PSI)
-
-### Other Metrics
-- Power Output: -100 to 100 kW
-- Charge Percentage: 0-100%
-- G Forces: ±2G per axis
 
 ### Debug Tools
 ```bash

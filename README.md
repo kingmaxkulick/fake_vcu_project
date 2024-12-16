@@ -42,8 +42,7 @@ flowchart LR
     States --> CAN[CAN Bus]
     Metrics --> CAN
     Faults --> CAN
-    CAN --> |"Vehicle Data"| Target["Target ECU
-    (Infotainment, etc.)"]
+    CAN --> |"Vehicle Data"| Target[" Infotainment ECU"]
     style Core fill:#f9f,stroke:#333
     style CAN fill:#ff9,stroke:#333
 ```

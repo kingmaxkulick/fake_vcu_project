@@ -13,19 +13,45 @@ This VCU simulator generates realistic vehicle data and state information, desig
 - Realistic data value simulation
 
 ## System Architecture
-```mermaid
-graph LR
-    KB[Keyboard Input] --> VCU[VCU Simulator]
-    VCU --> MSG[Message Generator]
-    MSG --> CAN[CAN Bus]
-    subgraph Metrics
-        M1[Vehicle States]
-        M2[Temperature Data]
-        M3[Power Metrics]
-        M4[Fault Data]
+flowchart LR
+    subgraph "VCU Simulator"
+        direction TB
+        UI[User Controls] --> Core
+        Core[Core Simulator]
+        
+        subgraph "Generated Data"
+            States[["Vehicle States
+            • PARK
+            • DRIVE
+            • REVERSE
+            • CHARGE"]]
+            
+            Metrics[["Vehicle Metrics
+            • Battery/Motor
+            • Power/Torque
+            • Temperatures
+            • Tire Data"]]
+            
+            Faults[["Fault Handling
+            • Detection
+            • Monitoring
+            • Clearing"]]
+        end
+        
+        Core --> States
+        Core --> Metrics
+        Core --> Faults
     end
-    MSG --> Metrics
-```
+    
+    States --> CAN[CAN Bus]
+    Metrics --> CAN
+    Faults --> CAN
+    
+    CAN --> |"Vehicle Data"| Target["Target ECU
+    (Infotainment, etc.)"]
+    
+    style Core fill:#f9f,stroke:#333
+    style CAN fill:#ff9,stroke:#333
 
 ## CAN Message Structure
 

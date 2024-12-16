@@ -225,32 +225,6 @@ candump -t a can0
 - Charge Percentage: 0-100%
 - G Forces: ±2G per axis
 
-## Development Notes
-
-### Adding New Messages
-1. Define CAN ID in can_ids.py
-2. Add message generation in message_sender.py
-3. Update nominal ranges if needed
-4. Set appropriate update interval
-
-### Modifying Behavior
-1. Adjust ranges in VehicleStates class
-2. Modify update intervals in message_sender.py
-3. Update simulation parameters as needed
-
-## Troubleshooting
-
-### Common Issues
-1. CAN Interface Not Found
-   - Check if interface is up
-   - Verify permissions
-   - Check kernel modules
-
-2. Message Timing Issues
-   - Verify system load
-   - Check update intervals
-   - Monitor message counters
-
 ### Debug Tools
 ```bash
 # Check CAN interface status

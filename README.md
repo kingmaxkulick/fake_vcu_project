@@ -1,5 +1,5 @@
-# Vehicle Control Unit (VCU) Simulator
-A Python-based Vehicle Control Unit simulator for electric vehicle development, providing real-time state information and vehicle metrics over CAN bus communication.
+# VCU Sim
+A Python-based vcu simulator, providing real-time state information and vehicle metrics over CAN bus communication.
 
 ## Overview
 This VCU simulator generates realistic vehicle data and state information, designed for developing and testing automotive infotainment and diagnostic systems. It simulates various vehicle states, fault conditions, and dynamic metrics over a CAN bus interface.

@@ -36,7 +36,7 @@ graph LR
 | 0x301 | Tire Data | 4 bytes | 500ms |
 
 ## Prerequisites
-- Python 3.11+
+- Python
 - Raspberry Pi with CAN interface
 - Virtual environment
 - Required Python packages (see requirements.txt)
@@ -113,9 +113,4 @@ fake_vcu_project/
 - Fault messages (0x601) include fault source, type, and severity
 - Metric messages include simulated sensor data with realistic variations
 
-### Data Ranges
-- Motor Temperature: 20-85°C
-- Battery Temperature: 15-45°C
-- Tire Pressure: 28-36 PSI
-- Power Output: -100 to 100 kW
 

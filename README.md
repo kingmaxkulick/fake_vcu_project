@@ -14,16 +14,17 @@ This VCU simulator generates realistic vehicle data and state information, desig
 
 ## System Architecture
 ```mermaid
-graph TB
-    KB[Keyboard Handler] --> Main
-    Main --> MS[Message Sender]
-    MS -->|CAN Messages| Bus[CAN Bus]
-    
-    subgraph Data Generation
-        MS --> States[Vehicle States]
-        MS --> Faults[Fault Status]
-        MS --> Metrics[Vehicle Metrics]
+graph LR
+    KB[Keyboard Input] --> VCU[VCU Simulator]
+    VCU --> MSG[Message Generator]
+    MSG --> CAN[CAN Bus]
+    subgraph Metrics
+        M1[Vehicle States]
+        M2[Temperature Data]
+        M3[Power Metrics]
+        M4[Fault Data]
     end
+    MSG --> Metrics
 ```
 
 ## CAN Message Structure

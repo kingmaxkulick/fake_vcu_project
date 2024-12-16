@@ -11,8 +11,9 @@ This VCU simulator generates realistic vehicle data and state information, desig
 - Interactive keyboard controls
 - Configurable update rates
 - Realistic data value simulation
-
+- 
 ## System Architecture
+```mermaid
 flowchart LR
     subgraph "VCU Simulator"
         direction TB

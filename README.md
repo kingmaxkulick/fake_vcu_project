@@ -27,13 +27,159 @@ graph LR
 ```
 
 ## CAN Message Structure
-| Message ID | Description | Length | Rate |
-|------------|-------------|---------|------|
-| 0x600 | Vehicle State | 8 bytes | 100ms |
-| 0x601 | Fault Status | 8 bytes | 100ms |
-| 0x101 | Charge Percentage | 1 byte | 200ms |
-| 0x201 | Motor Temperature | 1 byte | 200ms |
-| 0x301 | Tire Data | 4 bytes | 500ms |
+|
+ Message ID 
+|
+ Description 
+|
+ Length 
+|
+ Rate 
+|
+|
+------------
+|
+-------------
+|
+---------
+|
+------
+|
+|
+ 0x600 
+|
+ Vehicle State 
+|
+ 8 bytes 
+|
+ 100ms 
+|
+|
+ 0x601 
+|
+ Fault Status 
+|
+ 8 bytes 
+|
+ 100ms 
+|
+|
+ 0x101 
+|
+ Charge Percentage 
+|
+ 1 byte 
+|
+ 200ms 
+|
+|
+ 0x102 
+|
+ Charging Rate 
+|
+ 1 byte 
+|
+ 200ms 
+|
+|
+ 0x103 
+|
+ Est. Full Charge Time 
+|
+ 1 byte 
+|
+ 200ms 
+|
+|
+ 0x104 
+|
+ Battery Temperature 
+|
+ 1 byte 
+|
+ 200ms 
+|
+|
+ 0x201 
+|
+ Motor Temperature 
+|
+ 1 byte 
+|
+ 200ms 
+|
+|
+ 0x202 
+|
+ Inverter Temperature 
+|
+ 1 byte 
+|
+ 200ms 
+|
+|
+ 0x301 
+|
+ Tire Temperature 
+|
+ 4 bytes 
+|
+ 500ms 
+|
+|
+ 0x302 
+|
+ Tire Pressure 
+|
+ 4 bytes 
+|
+ 500ms 
+|
+|
+ 0x401 
+|
+ Power Output 
+|
+ 1 byte 
+|
+ 100ms 
+|
+|
+ 0x402 
+|
+ Torque Distribution 
+|
+ 4 bytes 
+|
+ 200ms 
+|
+|
+ 0x403 
+|
+ Suspension Metrics 
+|
+ 4 bytes 
+|
+ 200ms 
+|
+|
+ 0x404 
+|
+ G Forces 
+|
+ 3 bytes 
+|
+ 200ms 
+|
+|
+ 0x405 
+|
+ Brake Temperature 
+|
+ 1 byte 
+|
+ 200ms 
+|
 
 ## Prerequisites
 - Python
